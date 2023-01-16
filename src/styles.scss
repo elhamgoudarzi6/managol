@@ -1,0 +1,31 @@
+
+@font-face {
+    font-family: 'IRANSans_Bold';
+    src: url('./assets/fonts/IRANSansWeb\(FaNum\)_Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'IRANSans_Light';
+    src: url('./assets/fonts/IRANSansWeb\(FaNum\)_Light.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: IRANSans_Light !important;
+    font-size: 14px;
+    direction: rtl;
+    background-color: #f9fbfd;
+}
+a,a:hover{
+    outline: none;
+    text-decoration: none;
+    color: inherit;
+} 
+
+*:focus-within{
+    outline: 0 !important;
+    box-shadow: none !important;
+  }

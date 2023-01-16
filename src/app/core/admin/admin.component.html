@@ -1,0 +1,28 @@
+<mat-sidenav-container class="sidenav-container" dir="rtl">
+    <mat-sidenav #drawer class="sidenav" fixedInViewport="true"
+        [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'" [mode]="(isHandset$ | async) ? 'over' : 'side'"
+        [opened]="!(isHandset$ | async)">
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <p-toolbar>
+            <div class="container-fluid">
+                <div class="d-flex flex-row justify-content-between">
+                    <!-- <div class="p-2">
+                        <button pButton pRipple type="button" icon="pi pi-bars"
+                            class="p-button-rounded p-button-text text-white" (click)="drawer.toggle()"></button>
+                    </div> -->
+                    <div class="p-2">
+                        <span class="text-center text-white" style="font-family:IRANSans_Light;">dddd</span>
+                    </div>
+                    <div class="p-2">
+                        <button pButton pRipple type="button" icon="pi pi-power-off"
+                            class="p-button-rounded p-button-text text-white"></button>
+                    </div>
+                </div>
+            </div>
+        </p-toolbar>
+
+        <ng-content> </ng-content>
+        <router-outlet></router-outlet>
+    </mat-sidenav-content>
+</mat-sidenav-container>

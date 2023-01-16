@@ -1,0 +1,45 @@
+.parts {
+  padding: 30px 0 0;
+}
+
+.parts a .part-box {
+  padding: 25px 30px;
+  text-align: center;
+  border-radius: 10px;
+  transition: all ease-in-out 0.5s;
+  background: #fff;
+  box-shadow: 0 0 15px 0 rgba(18, 66, 101, 0.08);
+  // box-shadow: 0px 2px 5px -1px rgb(0 0 0 / 20%), 0px 1px 1px 0px rgb(0 0 0 / 14%), 0px 1px 3px 0px rgb(0 0 0 / 12%);
+}
+
+.parts a .part-box:hover {
+  transform: scale(1.04);
+}
+
+.parts a .part-box i {
+  color: #e18609;
+  font-size: 35px;
+}
+
+.parts a .part-box i:before {
+  background: #1dc8cd;
+  background: linear-gradient(45deg, #1dc8cd 0%, #55fabe 100%);
+  background-clip: border-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.parts a .part-box p {
+  font-family: 'IRANSans_Light' !important;
+  text-align: justify;
+  font-size: 16px;
+  color: #888;
+
+}
+
+.parts a .part-box h3 {
+  color: #888;
+  font-size: 16px;
+  margin-top: 10px;
+  font-family: 'IRANSans_Bold';
+}

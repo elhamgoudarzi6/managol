@@ -1,0 +1,11 @@
+<mat-drawer-container>
+  <mat-drawer #drawer mode="side">
+    I'm a drawer
+    <p-panelMenu [model]="items" [style]="{'width':'100%','margin-top':'50px'}"></p-panelMenu>
+  </mat-drawer>
+  <mat-drawer-content>
+    <ng-content> </ng-content>
+    <router-outlet></router-outlet>
+    <button mat-raised-button >Toggle drawer</button>
+  </mat-drawer-content>
+</mat-drawer-container>
