@@ -8,7 +8,7 @@ import { ViewportScroller } from '@angular/common';
 })
 export class HeaderComponent implements OnInit {
   items: MenuItem[];
-  display:boolean | any;
+  display=false;
   constructor(private viewportScroller: ViewportScroller) {
     this.items = [
       {
@@ -17,14 +17,19 @@ export class HeaderComponent implements OnInit {
         command: event => this.onClick('home-sec')
       },
       {
-        label: 'درباره ما',
-        icon: 'pi pi-fw pi-info-circle',
-        command: event => this.onClick('about-sec')
+        label: 'محصولات',
+        icon: 'pi pi-fw pi-shopping-bag',
+        command: event => this.onClick('services-sec')
       },
       {
         label: 'خدمات',
         icon: 'pi pi-fw pi-th-large',
         command: event => this.onClick('services-sec')
+      },
+      {
+        label: 'درباره ما',
+        icon: 'pi pi-fw pi-info-circle',
+        command: event => this.onClick('about-sec')
       },
       {
         label: 'تماس با ما',

@@ -11,6 +11,7 @@ import { ProductsComponent } from './home/products/products.component';
 import { LoginComponent } from './login/login.component';
 import { ServiceComponent } from './home/service/service.component';
 import { AboutComponent } from './home/about/about.component';
+import { PrimengListModule } from '../primeng-list.module';
 @NgModule({
   declarations: [
     LayoutComponent,
@@ -28,6 +29,7 @@ import { AboutComponent } from './home/about/about.component';
     LayoutRoutingModule,
     FormsModule,
     ReactiveFormsModule,
+    PrimengListModule
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })

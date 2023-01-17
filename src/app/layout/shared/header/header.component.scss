@@ -110,7 +110,9 @@
 
 .mobileheader {
   display: none;
-  background-color: #000;
+  background: rgba(12, 11, 9, 0.6);
+  border-bottom: 1px solid #333;
+  padding: 10px 0;
 }
 
 .sticky {
@@ -129,4 +131,14 @@
   .header {
     display: none;
   }
+}
+
+
+:host::ng-deep .p-panelmenu .p-menuitem-text {
+  font-family: 'IRANSans_Bold' !important;
+  font-size: 14px;
+}
+
+:host::ng-deep .p-panelmenu .p-panelmenu-header>a .p-menuitem-icon {
+  margin-left: 5px;
 }
