@@ -22,7 +22,7 @@
   </div>
 </header>
 
-<p-sidebar [(visible)]="display" [style]="{ width: '15em' }" position="right" [showCloseIcon]="true">
+<p-sidebar [(visible)]="display" [style]="{ width: '15em' }" position="right" [showCloseIcon]="true" [baseZIndex]="10000">
   <div class="d-flex flex-column">
     <div class="mb-auto">
       <p-panelMenu [model]="items" [style]="{ width: '100%' }"></p-panelMenu>
