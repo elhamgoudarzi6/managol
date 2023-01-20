@@ -8,36 +8,37 @@ import { ViewportScroller } from '@angular/common';
 })
 export class HeaderComponent implements OnInit {
   items: MenuItem[];
-  display=false;
+  display = false;
   constructor(private viewportScroller: ViewportScroller) {
     this.items = [
       {
         label: 'صفحه اصلی',
         icon: 'pi pi-pw pi-home',
-        command: event => this.onClick('home-sec')
+        command: event => this.onClick('hero')
       },
       {
         label: 'محصولات',
         icon: 'pi pi-fw pi-shopping-bag',
-        command: event => this.onClick('services-sec')
+        command: event => this.onClick('counts')
       },
       {
         label: 'خدمات',
         icon: 'pi pi-fw pi-th-large',
-        command: event => this.onClick('services-sec')
+        command: event => this.onClick('more-features')
       },
       {
         label: 'درباره ما',
         icon: 'pi pi-fw pi-info-circle',
-        command: event => this.onClick('about-sec')
+        command: event => this.onClick('about')
       },
       {
         label: 'تماس با ما',
         icon: 'pi pi-fw pi-phone',
-        command: event => this.onClick('contact-sec')
+        command: event => this.onClick('contact')
       },
     ];
   }
+
 
   ngOnInit(): void {
     var pc = window.document.getElementById('scroll')!;

@@ -12,6 +12,7 @@ import { LoginComponent } from './login/login.component';
 import { ServiceComponent } from './home/service/service.component';
 import { AboutComponent } from './home/about/about.component';
 import { PrimengListModule } from '../primeng-list.module';
+import { ContactComponent } from './home/contact/contact.component';
 @NgModule({
   declarations: [
     LayoutComponent,
@@ -23,6 +24,7 @@ import { PrimengListModule } from '../primeng-list.module';
     LoginComponent,
     ServiceComponent,
     AboutComponent,
+    ContactComponent,
   ],
   imports: [
     CommonModule,
