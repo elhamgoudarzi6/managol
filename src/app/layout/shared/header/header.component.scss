@@ -24,12 +24,13 @@
   font-family: "Poppins", sans-serif;
 }
 
-.header .logo a {
-  color: #fff;
+
+.header img {
+  margin-right: 10px;
 }
 
-.header .logo img {
-  max-height: 40px;
+.logo {
+  max-width: 230px;
 }
 
 .book-a-table-btn {
@@ -114,7 +115,7 @@
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: #555;
+  background: rgba(0, 0, 0, 0.95);
   opacity: 80%;
 }
 

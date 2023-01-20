@@ -1,28 +1,35 @@
-<header id="scroll" class="header fixed-top">
-  <div class="container-fluid container-xl d-flex align-items-center justify-content-lg-between">
-    <h1 class="logo me-auto me-lg-0"><a href="#">MANAGOL</a></h1>
-    <!-- <a href="index.html" class="logo me-auto me-lg-0"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
-    <nav id="navbar" class="navbar order-last order-lg-0">
-      <ul>
-        <li><a class="nav-link scrollto active" href="#hero">صفحه اصلی</a></li>
-        <li><a class="nav-link scrollto" href="#about">محصولات</a></li>
-        <li><a class="nav-link scrollto" href="#menu">خدمات</a></li>
-        <li><a class="nav-link scrollto" href="#specials">درباره ما</a></li>
-        <li><a class="nav-link scrollto" href="#events">تماس با ما</a></li>
-      </ul>
-    </nav>
-    <a href="#" class="book-a-table-btn scrollto d-none d-lg-flex">سفارش</a>
+<div id="scroll" class="header fixed-top">
+  <div class="row justify-content-center">
+    <div class="col-2 d-flex align-self-center">
+      <a href="index.html" class="logo me-auto me-lg-0"><img src="../../../../assets/images/logo.png" alt="ماناگل"
+          class="img-fluid"></a>
+    </div>
+    <div class="col align-self-center">
+      <nav id="navbar" class="navbar order-last order-lg-0 justify-content-center">
+        <ul>
+          <li><a class="nav-link scrollto active" href="#hero">صفحه اصلی</a></li>
+          <li><a class="nav-link scrollto" href="#parts">محصولات</a></li>
+          <li><a class="nav-link scrollto" href="#more-features">خدمات</a></li>
+          <li><a class="nav-link scrollto" href="#about">درباره ما</a></li>
+          <li><a class="nav-link scrollto" href="#footer">تماس با ما</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="col-2 d-flex flex-row-reverse align-self-center">
+      <a href="#" class="book-a-table-btn scrollto d-none d-lg-flex">سفارش</a>
+    </div>
   </div>
-</header>
+</div>
 
 <header id="scroll" class="mobileheader fixed-top">
   <div class="container-fluid d-flex flex-row justify-content-between">
-    <i class="bi bi-list mobile-nav-toggle mr-5" (click)="showMenu()"></i>
-    <h1 class="text-white ml-5"><a href="#">MANAGOL</a></h1>
+    <i class="bi bi-list mobile-nav-toggle mr-5 mt-3" (click)="showMenu()"></i>
+    <a href="#"><img src="../../../../assets/images/logo.png" alt="" class="logo ml-5"></a>
   </div>
 </header>
 
-<p-sidebar [(visible)]="display" [style]="{ width: '15em' }" position="right" [showCloseIcon]="true" [baseZIndex]="10000">
+<p-sidebar [(visible)]="display" [style]="{ width: '15em' }" position="right" [showCloseIcon]="true"
+  [baseZIndex]="10000">
   <div class="d-flex flex-column">
     <div class="mb-auto">
       <p-panelMenu [model]="items" [style]="{ width: '100%' }"></p-panelMenu>
