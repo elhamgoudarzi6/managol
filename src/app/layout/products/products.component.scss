@@ -1,0 +1,205 @@
+.panel-title {
+    font-size: 14px;
+    font-family: IRANSans_Bold;
+    margin-bottom: 15px;
+}
+
+.breadcrumb {
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 6px 5px 20px 0px rgba(#ddd, .2);
+    margin: 20px 5px 10px;
+    padding: 15px;
+}
+
+.panel-breadcrumb li {
+    margin: 0;
+    font-size: 13px;
+    color: #555;
+    font-family: IRANSans_Light;
+    cursor: pointer;
+}
+
+.panel-breadcrumb li:not(:last-child)::after {
+    margin: 0 5px;
+    content: "/";
+
+}
+
+.panel-breadcrumb li.current {
+    color: #777;
+}
+
+:host::ng-deep .p-accordion {
+    margin-right: 5px;
+}
+
+:host::ng-deep .p-accordion ul li::before {
+    content: '\2013';
+    margin-left: 5px;
+    margin-top: 10px;
+}
+
+ul li {
+    font-size: 16px;
+    font-family: IRANSans_Bold;
+    list-style: none;
+    cursor: pointer;
+    color: #777;
+}
+
+:host::ng-deep .p-accordion .p-accordion-header .p-accordion-header-link {
+    background-color: #fff;
+    font-size: 14px;
+    font-family: IRANSans_Bold;
+    border-radius: 10px;
+}
+
+:host::ng-deep .p-accordion .p-accordion-header .p-accordion-header-link:hover {
+    background-color: transparent !important;
+}
+
+:host::ng-deep .p-accordion .p-accordion-header:not(.p-disabled).p-highlight .p-accordion-header-link .p-accordion-toggle-icon {
+    //color: #ff9e28;
+}
+
+// :host::ng-deep .p-accordion .p-accordion-header .p-accordion-header-link .p-accordion-toggle-icon {
+//     content: '\00BB';
+//     margin-left: 30px;
+// }
+
+
+:host::ng-deep .p-accordion .p-accordion-header .p-accordion-header-link .p-accordion-toggle-icon {
+    margin-left: 5px;
+    margin-top: -8px;
+    position: absolute;
+    left: 15px;
+    top: 50%;
+}
+
+:host::ng-deep .p-panel .p-panel-header {
+    font-size: 16px;
+    color: #777;
+    font-family: 'IRANSans_Light' !important;
+}
+
+h1 {
+    font-size: 16px;
+    color: #777;
+    font-family: 'IRANSans_Bold' !important;
+    cursor: pointer;
+}
+
+.box {
+    position: relative;
+    text-align: center;
+    border-radius: 10px;
+    background: #fff;
+    padding: 15px;
+    box-shadow: 6px 5px 20px 0px rgba(#ddd, .2);
+    cursor: pointer;
+    transition: 0.3s;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.box:hover {
+    transform: scale(1.02);
+
+}
+
+.box img {
+    border-radius: 5px;
+  }
+
+
+.box .btn {
+    margin: 5px 100px !important;
+}
+
+.box .box-body {
+    padding: 5px 30px;
+}
+
+.box h2 {
+    font-size: 16px;
+    color: #777;
+    margin-top: 20px;
+    font-family: 'IRANSans_Bold' !important;
+}
+
+.box h4 {
+    font-size: 14px;
+    color: #777;
+    font-family: 'IRANSans_Light' !important;
+    line-height: 20px;
+}
+
+:host::ng-deep .p-button {
+    font-size: 14px;
+    font-family: IRANSans_Bold !important;
+    padding: 8px 20px;
+    background: linear-gradient(45deg, #ffe134 0%, #ff9e28 100%);
+    border: none;
+}
+
+:host::ng-deep .p-button:hover {
+    background: linear-gradient(45deg, #ffe134 0%, #ff9e28 100%);
+    border: none;
+}
+
+.filter-actions-wrapper {
+    display: none;
+    background-color: rgb(255, 255, 255);
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    z-index: 999;
+    padding: 20px;
+}
+
+.filter-actions {
+    background: linear-gradient(45deg, #ffe134 0%, #ff9e28 100%);
+    color: rgb(255, 255, 255);
+    display: block;
+    height: 40px;
+    padding: 11px 0px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.filter-actions .side-toggle {
+    border-left: 1px solid rgb(255, 255, 255);
+
+
+}
+
+.filter-actions a {
+    display: flex;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    height: auto;
+    font-size: 14px;
+    align-items: center;
+    justify-content: center;
+}
+
+.filter-actions i {
+    font-size: 20px;
+    margin-left: 3px;
+}
+
+@media (max-width: 992px) {
+    .accordion {
+        display: none;
+    }
+
+    .filter-actions-wrapper {
+        display: block;
+    }
+
+
+}

@@ -1,0 +1,59 @@
+.sidenav-container {
+  height: 100%;
+  width: 100%;
+}
+
+.sidenav {
+  width: 230px;
+  background: #03254c;
+  border-left: none;
+  box-shadow: 0px 2px 1px -1px rgb(0 0 0 / 20%), 0px 1px 1px 0px rgb(0 0 0 / 14%), 0px 1px 3px 0px rgb(0 0 0 / 12%) !important;
+}
+
+
+:host::ng-deep.p-panelmenu .p-panelmenu-panel .p-panelmenu-header>a {
+ border-radius: 5px;
+  margin: 5px 30px;
+  padding: 12px;
+  font-size: 14px;
+  background-color: #03254c;
+ color: #fff;
+  border-bottom: 0.5px solid #fff;
+  font-family: IRANSans_Light !important;
+}
+
+.profile {
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  margin-top: 5px;
+}
+
+:host::ng-deep .mat-divider {
+  border-color: #f3f3f3;
+  margin: 0 10px;
+}
+
+:host::ng-deep .p-panelmenu .p-panelmenu-header>a .p-menuitem-icon,
+:host::ng-deep .p-panelmenu .p-panelmenu-header>a .p-panelmenu-icon {
+  margin-left: 0.5rem;
+}
+
+:host::ng-deep .pi-chevron-right:before {
+  content: "\e900";
+}
+
+:host::ng-deep.p-toolbar {
+  background: #03254c !important;
+  height: 70px;
+
+  box-shadow: 0px 2px 1px -1px rgb(0 0 0 / 20%), 0px 1px 1px 0px rgb(0 0 0 / 14%), 0px 1px 3px 0px rgb(0 0 0 / 12%) !important;
+}
+button{
+  color: #fff !important;
+}
+h6 {
+  font-family: IRANSans_Light !important;
+  font-size: 16px;
+  color: #fff;
+}

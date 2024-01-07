@@ -1,0 +1,119 @@
+.contact {
+  padding: 30px;
+}
+
+.contact h1 {
+  font-size: 23px;
+  font-family: 'IRANSans_Bold' !important;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #777;
+}
+
+.contact .info {
+  padding: 30px;
+  background: #fff;
+  color: #334240;
+  text-align: center;
+  border: .5px solid rgb(226, 226, 226);
+  //  box-shadow: 0 0 1px 0 rgba(18, 66, 101, 0.08);
+  border-radius: 5px;
+}
+
+.contact .info i {
+  font-size: 48px;
+  color: #ffe134;
+  margin-bottom: 15px;
+}
+
+.contact .info i:before {
+  background: linear-gradient(45deg, #ffe134 0%, #ff9e28 100%);
+  background-clip: border-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.contact .info h4 {
+  font-size: 14px;
+  font-family: 'IRANSans_Bold' !important;
+}
+
+.contact .info p {
+  font-size: 14px;
+  font-family: 'IRANSans_Light' !important;
+  color: #666;
+}
+
+.contact .contact-form-wrap {
+  background: #fff;
+  padding: 30px;
+  border-radius: 5px;
+  border: 1px solid rgb(226, 226, 226);
+  // box-shadow: 0 0 1px 0 rgba(18, 66, 101, 0.08);
+}
+
+.contact .form .sent-message {
+  display: none;
+  color: #fff;
+  background: #18d26e;
+  text-align: center;
+  padding: 15px;
+  font-weight: 600;
+}
+
+.contact .form label {
+  font-size: 14px;
+  font-family: 'IRANSans_Bold' !important;
+  margin-bottom: 5px;
+  color: #777;
+}
+
+.contact .form input,
+.contact .form textarea {
+  border-radius: 5px;
+  box-shadow: none;
+  font-size: 14px;
+}
+
+.contact .form input {
+  padding: 20px 15px;
+  height: 50px;
+}
+
+.contact .form textarea {
+  padding: 12px 15px;
+}
+
+.contact .form input:focus,
+.contact .form textarea:focus {
+  border-color: #ffe134;
+}
+.input-container {
+  display: flex;
+  width: 100%;
+}
+.contact .form button[type="submit"] {
+  background: linear-gradient(45deg, #ffe134 0%, #ff9e28 100%);
+  padding: 10px 35px;
+  color: #fff;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+
+@media (max-width: 1024px) {
+  .contact .info {
+    padding: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact .form {
+    padding: 15px 0 0 0;
+  }
+}
+
+.alert{
+  font-size: 10px;
+}

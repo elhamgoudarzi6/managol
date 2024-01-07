@@ -1,0 +1,76 @@
+<meta name="keywords" *ngIf="keywords != undefined" [content]="keywords" />
+<meta name="description" *ngIf="metaData != undefined" [content]="metaData" />
+<div class="container-fluid">
+  <div class="breadcrumb">
+    <div class="row">
+      <div class="col-lg-12 text-right">
+        <ul class="list-inline panel-breadcrumb">
+          <li class="list-inline-item pointer" routerLink="/"><i class="pi pi-home"></i></li>
+          <li class="list-inline-item current">محصولات</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container-fluid">
+  <div class="row justify-content-center mb-4">
+    <div class="col-lg-3 accordion">
+      <p-panel header="دسته بندی محصولات">
+        <!-- <p-accordion  expandIcon="pi pi-angle-left" iconPos="right" *ngFor="let cat of cats; let i = index">
+          <p-accordionTab [toggleable]="false" (click)="goProduct(cat._id)" [header]="cat.title">
+          </p-accordionTab>
+        </p-accordion> -->
+        <h1 (click)="goProduct(0)">همه محصولات</h1>
+        <p-divider></p-divider>
+        <div *ngFor="let cat of cats; let i = index">
+          <h1 (click)="goProduct(cat._id)">{{cat.title}}</h1>
+          <p-divider></p-divider>
+        </div>
+      </p-panel>
+    </div>
+    <div class="col-lg-9">
+      <div class="row">
+        <div class="col-lg-4 mb-4" *ngFor="let item of products">
+          <div class="box card-block">
+            <img [src]="item.image" [alt]="item.title" />
+            <div class="box-body">
+              <h2>{{item.title}}</h2>
+              <h4>{{item.info}}</h4>
+              <div class="row justify-content-center">
+                <button class="btn" pButton label="مشاهده" [routerLink]="'/product/'+item._id"></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="filter-actions-wrapper">
+      <div class="filter-actions">
+        <a class="text-center" (click)="openFilter()">
+          <i class="pi pi-search"></i>
+          نمابش دسته بندی محصولات
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<p-sidebar Scroll [(visible)]="displayFilter" [modal]="true" position="left">
+  <div class="row  mt-3 ">
+    <div class="col-12 text-center justify-content-center">
+      <!-- <p-accordion [multiple]="true" *ngFor="let cat of cats; let i = index">
+        <h1 (click)="goProduct(cat._id)" [header]="cat.title">
+        </h1>
+        <p-divider></p-divider>
+      </p-accordion> -->
+      <p-panel header="دسته بندی محصولات">
+        <h1 (click)="goProduct(0)">همه محصولات</h1>
+        <p-divider></p-divider>
+        <div *ngFor="let cat of cats; let i = index">
+          <h1 (click)="goProduct(cat._id)">{{cat.title}}</h1>
+          <p-divider></p-divider>
+        </div>
+      </p-panel>
+    </div>
+  </div>
+</p-sidebar>

@@ -1,0 +1,88 @@
+<p-toast position="center"></p-toast>
+<p-confirmDialog  [baseZIndex]="10000"></p-confirmDialog>
+
+<div class="pnl-content p-3">
+    <div class="row no-gutters">
+        <div class="col-lg-12">
+            <div class="box">
+                <div class="row no-gutters justify-content-center">
+                    <div class="col-lg-12 col-sm-12 align-self-center">
+                        <ul class="list-inline panel-breadcrumb">
+                            <li class="list-inline-item pointer" [routerLink]="['/']">پنل ادمین</li>
+                            <li class="list-inline-item current" [routerLink]="['/']">لیست سفارش ها</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="pnl-content p-3">
+    <div class="row no-gutters">
+        <div class="col-lg-12">
+            <div class="box text-right">
+                <p-table #dt [columns]="cols" [value]="orders" [exportHeader]="'customExportHeader'" dataKey="_id"
+                    [rows]="10" [showCurrentPageReport]="true" [paginator]="true"
+                    currentPageReportTemplate="{first} تا {last} از {totalRecords}" [filterDelay]="0"
+                    [globalFilterFields]="['title', 'number', 'code']">
+                    <ng-template pTemplate="caption">
+                        <div class="table-header row">
+                            <div class="col-sm-6 text-right">
+                                <button pButton pRipple label="جدید" icon="pi pi-plus"
+                                    class="panel-border-button  p-button-icon-right"
+                                    (click)="showAddOrderDialog()"></button>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <span class="p-input-icon-left w-100 mt-3">
+                                    <i class="pi pi-search"></i>
+                                    <input pInputText type="text" class="w-100"
+                                        (input)="dt.filterGlobal($any($event.target).value, 'contains')"
+                                        placeholder="جستجو کلی" />
+                                </span>
+                            </div>
+                        </div>
+                    </ng-template>
+                    <ng-template pTemplate="header" let-columns>
+                        <tr>
+                            <th *ngFor="let col of columns" [pSortableColumn]="col.field"
+                                [pSortableColumnDisabled]="col.showSort === false">
+                                {{col.header}}
+                            </th>
+                            <th>کد محصول</th>
+                            <th>نام محصول</th>
+                            <th>شرکت</th>
+                            <th>موبایل</th>
+                            <th>فایل</th>
+                            <th>وضعیت</th>
+                            <th>عملیات</th>
+                        </tr>
+                    </ng-template>
+                    <ng-template pTemplate="body" let-rowData let-columns="columns">
+                        <tr [pSelectableRow]="rowData">
+                            <td *ngFor="let col of columns">
+                                {{rowData[col.field]}}
+                            </td>
+                            <td>{{rowData.Product[0].code}}</td>
+                            <td>{{rowData.Product[0].title}}</td>
+                            <td>{{rowData.User[0].companyName}}</td>
+                            <td>{{rowData.User[0].mobile}}</td>
+                            <td>
+                                <a *ngIf="rowData.file" [href]="rowData.file">دانلود</a>
+                            </td>
+                            <td>
+                                {{rowData.status}}
+                            </td>
+                            <td>
+                                <button pButton pRipple icon="pi pi-pencil" (click)="showEditOrderDialog(rowData)" class="p-button-warning"></button>
+                                <button pButton pRipple icon="pi pi-trash" class="p-button-danger"
+                                    (click)="deleteOrder(rowData.id)"></button>
+                            </td>
+                        </tr>
+                    </ng-template>
+                </p-table>
+            </div>
+        </div>
+    </div>
+</div>

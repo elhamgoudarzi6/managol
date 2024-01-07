@@ -1,0 +1,51 @@
+<div id="scroll" class="header fixed-top">
+  <div class="row justify-content-center">
+    <div class="col-2 d-flex align-self-center">
+      <a class="logo me-auto me-lg-0"><img src="../../../../assets/images/logo.png" alt="ماناگل" class="img-fluid"></a>
+    </div>
+    <div class="col justify-content-center">
+      <!-- <p-megaMenu [model]="items2"></p-megaMenu> -->
+      <nav id="navbar" class="navbar order-last order-lg-0 justify-content-center">
+        <ul>
+          <li><a class="nav-link scrollto active" href="#hero">{{'homepage'| translate}}</a></li>
+          <li><a class="nav-link scrollto" routerLink="products">{{'products'| translate}}</a></li>
+          <li><a class="nav-link scrollto" routerLink="faq" [state]="{ lang:currentLang }">{{'faq'| translate}}</a></li>
+          <li><a class="nav-link scrollto" href="#about">{{'aboutus'| translate}}</a></li>
+          <li><a class="nav-link scrollto" href="#contact">{{'contactus'| translate}}</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="col-2 d-flex flex-row align-items-center justify-content-between">
+      <a *ngIf="!currentUser" class="auth-btn" routerLink="auth" [state]="{route:''}">{{'login'| translate}}</a>
+      <a *ngIf="currentUser && type=='user'" class="auth-btn" routerLink="/user">{{'panel'| translate}}</a>
+      <select class="select" #selectedLang (change)="switchLanguage(selectedLang.value)">
+        <option *ngFor="let language of translate.getLangs()" [value]="language"
+          [selected]="language==translate.currentLang">
+          {{language}}
+        </option>
+      </select>
+    </div>
+  </div>
+</div>
+
+<header id="mscroll" class="mobileheader fixed-top">
+  <div class="container-fluid d-flex flex-row align-items-center justify-content-between">
+    <i class="bi bi-list mobile-nav-toggle mr-5" (click)="showMenu()"></i>
+    <a href="#"><img src="../../../../assets/images/logo.png" alt="" class="logo ml-5"></a>
+    <select class="select" #selectedLang (change)="switchLanguage(selectedLang.value)">
+      <option *ngFor="let language of translate.getLangs()" [value]="language"
+        [selected]="language==translate.currentLang">
+        {{language}}
+      </option>
+    </select>
+  </div>
+</header>
+
+<p-sidebar [(visible)]="display" [style]="{ width: '55%' }" position="right" [showCloseIcon]="true"
+  [baseZIndex]="10000">
+  <div class="d-flex flex-column">
+    <div class="mb-auto">
+      <p-panelMenu [model]="items" [style]="{ width: '100%' }"></p-panelMenu>
+    </div>
+  </div>
+</p-sidebar>

@@ -1,0 +1,57 @@
+.counts {
+  padding: 70px 0 60px;
+}
+.counts h1 {
+  font-size: 23px;
+  font-family: 'IRANSans_Bold' !important;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #777;
+}
+.counts .count-box {
+  padding: 30px 30px 25px 30px;
+  width: 100%;
+  position: relative;
+  text-align: center;
+  background: #fff;
+  border-radius: 10px;
+  transition: all ease-in-out 0.5s;
+  box-shadow: 0 0 15px 0 rgba(18, 66, 101, 0.08);
+
+}
+
+.counts .count-box:hover {
+  transform: scale(1.04);
+}
+
+
+.counts .count-box i {
+  position: absolute;
+  top: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 30px;
+  background: linear-gradient(45deg, #ffe134 0%, #ff9e28 100%);
+  padding: 18px;
+  color: #fff;
+  border-radius: 50px;
+}
+
+.counts .count-box h1 {
+  display: block;
+  margin: 18px 0 5px;
+  color: #888;
+  font-size: 16px;
+  font-family: 'IRANSans_Bold';
+}
+
+.counts .count-box p {
+  font-family: 'IRANSans_Light' !important;
+  text-align: justify;
+  font-size: 16px;
+  color: #888;
+}
+
+
+
+

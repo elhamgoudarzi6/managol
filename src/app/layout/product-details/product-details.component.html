@@ -1,0 +1,54 @@
+<meta name="keywords"*ngIf="product.keywords != undefined" [content]="product.keywords" />
+<meta name="description" *ngIf="product.metaData != undefined" [content]="product.metaData"/>
+<div class="container-fluid mt-2">
+    <div class="panel">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="row no-gutters justify-content-center">
+                    <div class="col-lg-12 col-sm-12 align-self-center">
+                        <ul class="list-inline panel-breadcrumb">
+                            <li class="list-inline-item pointer" routerLink="/"><i class="pi pi-home"></i></li>
+                            <li class="list-inline-item pointer">{{product.Category[0].title}}</li>
+                            <li class="list-inline-item current">{{product.title}}</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="box">
+        <div class="row justify-content-center">
+            <div class="col-lg-4 col-sm-12 align-self-center">
+                <p-galleria [value]="product.gallery" [showIndicators]="true" [showThumbnails]="false"
+                    [changeItemOnIndicatorHover]="true" [responsiveOptions]="responsiveOptions"
+                    [containerStyle]="{ 'max-width': '640px' }">
+                    <ng-template pTemplate="item" let-item>
+                        <img [src]="item.url" style="width: 100%; display: block;" />
+                    </ng-template>
+                </p-galleria>
+                <!-- <p-galleria [value]="product.gallery" [responsiveOptions]="responsiveOptions" [containerStyle]="{ 'max-width': '640px' }" [numVisible]="5">
+                    <ng-template pTemplate="item" let-item>
+                        <img [src]="item.url" style="width: 100%;" />
+                    </ng-template>
+                    <ng-template pTemplate="thumbnail" let-item>
+                        <div class="grid grid-nogutter justify-content-center">
+                            <img [src]="item.url" style="width:150px;"/>
+                        </div>
+                    </ng-template>
+                </p-galleria> -->
+
+            </div>
+            <div class="col-lg-8 col-sm-12 align-items-center text-center">
+                <div class="info">
+                    <h1>{{product.title}}</h1>
+                    <h2>{{product.info}}</h2>
+                    <p>{{product.description}}</p>
+                    <button *ngIf="!currentUser" pButton label="سفارش" routerLink="/auth"
+                        [state]="{route:'product-details'}" [queryParams]="{id:product._id}"></button>
+                    <button *ngIf="currentUser" pButton label="سفارش" routerLink="/order"
+                        [queryParams]="{id:product._id}"></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
